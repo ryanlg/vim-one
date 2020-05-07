@@ -299,7 +299,7 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
 
     let s:hue_1  = ['#56b6c2', '73'] " cyan
     let s:hue_2  = ['#61afef', '75'] " blue
-    let s:hue_3  = ['#c678dd', '176'] " purple
+    let s:hue_3  = ['#c98ce6', '176'] " purple
     let s:hue_4  = ['#98c379', '114'] " green
 
     let s:hue_5   = ['#e06c75', '168'] " red 1
@@ -817,9 +817,11 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Rust highlighting -------------------------------------------------------{{{
-  call <sid>X('rustExternCrate',          s:hue_5,    '', 'bold')
-  call <sid>X('rustIdentifier',           s:hue_2,    '', '')
-  call <sid>X('rustDeriveTrait',          s:hue_4,    '', '')
+  call <sid>X('rustAttribute',            s:mono_2,    '', '')
+  call <sid>X('rustDerive',               s:mono_2,    '', '')
+  call <sid>X('rustExternCrate',          s:hue_5,     '', 'bold')
+  call <sid>X('rustIdentifier',           s:mono_1,     '', '')
+  call <sid>X('rustDeriveTrait',          s:mono_2,    '', '')
   call <sid>X('SpecialComment',           s:mono_3,    '', '')
   call <sid>X('rustCommentLine',          s:mono_3,    '', '')
   call <sid>X('rustCommentLineDoc',       s:mono_3,    '', '')
@@ -827,6 +829,15 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('rustCommentBlock',         s:mono_3,    '', '')
   call <sid>X('rustCommentBlockDoc',      s:mono_3,    '', '')
   call <sid>X('rustCommentBlockDocError', s:mono_3,    '', '')
+  call <sid>X('rustArrowCharacter',       s:mono_1,    '', '')
+  call <sid>X('rustOperator',             s:mono_1,    '', '')
+  call <sid>X('rustKeyword',              s:hue_3,     '', '')
+  call <sid>X('rustFuncName',             s:mono_1,    '', '')
+  call <sid>X('rustStructure',            s:hue_3,     '', '')
+  call <sid>X('rustSelf',                 s:mono_1,     '', '')
+  call <sid>X('rustFuncCall',             s:mono_1,    '', '')
+  call <sid>X('rustSigil',                s:mono_1,    '', '')
+
   " }}}
 
   " man highlighting --------------------------------------------------------{{{
